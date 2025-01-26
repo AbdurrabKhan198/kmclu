@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>logged out form</h2>
+<form method="post">
+{% csrf_token %}
+{{form.as_p}}
+
+<p>you have been logged out <a href="{% url 'login' %}">login here</a></p>
+{% endblock %}
